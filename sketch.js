@@ -5,7 +5,7 @@ function setup() {
 
   background(0);
   stroke(255);
-  translate(width / 2, height );
+  translate(windowWidth / 2, windowHeight);
 
   branch(200);
 }
@@ -15,7 +15,7 @@ function draw() {
   if (frameCount % 150 === 0) {
     background(0);
     stroke(255);
-    translate(width / 2, height );
+    translate(windowWidth / 2, windowHeight);
   
     branch(200);
   }
@@ -47,6 +47,6 @@ function branch(len = 10) {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   background(0);
-  translate(width / 2, height );
+  translate(windowWidth / 2, windowHeight);
   branch(200);
 }
