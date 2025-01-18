@@ -2,15 +2,23 @@ let root;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-}
 
-function draw() {
-  frameRate(0.25);
   background(0);
   stroke(255);
   translate(width / 2, height );
 
   branch(200);
+}
+
+function draw() {
+  // draw a tree every 5 seconds
+  if (frameCount % 150 === 0) {
+    background(0);
+    stroke(255);
+    translate(width / 2, height );
+  
+    branch(200);
+  }
 }
 
 function branch(len = 10) {
